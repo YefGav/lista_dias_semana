@@ -15,5 +15,12 @@ public class GestorDiasSemanaTest {
         assertThat(gestorDiasSemana, notNullValue());
         assertThat(gestorDiasSemana, instanceOf(GestorDiasSemana.class));
     }
+    @Test
+    @DisplayName("Verificar que la lista dias inicia vacía")
 
+    void testListaDiasVacia(){
+        GestorDiasSemana gestorDiasSemana = new GestorDiasSemana();
+        assertThat(gestorDiasSemana.getDias(), notNullValue());
+
+    }
 }
