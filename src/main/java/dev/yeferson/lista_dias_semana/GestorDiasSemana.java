@@ -8,10 +8,15 @@ public class GestorDiasSemana {
     public GestorDiasSemana(List<String> dias) {
         this.dias = dias;
     }
+
+    public List<String> getDias() {
+        return dias;
+    }
+
+
+
+  
         
-        public List<String> getDias() {
-            return dias;
-        }
     }
 
     
