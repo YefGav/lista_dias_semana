@@ -13,11 +13,19 @@ public class GestorDiasSemana {
         return dias;
     }
 
-
+    public void agregarListaDias() {
+        dias.add("Lunes");
+        dias.add("Martes");
+        dias.add("Miercoles");
+        dias.add("Jueves");
+        dias.add("Viernes");
+        dias.add("Sabado");
+        dias.add("Domingo");
+    }   
 
   
         
-    }
+}
 
     
 
