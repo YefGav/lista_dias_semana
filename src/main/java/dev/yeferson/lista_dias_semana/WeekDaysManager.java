@@ -22,5 +22,12 @@ public class WeekDaysManager {
     public List<String> getDays() {
         return days;
     }
+    public int getDaysListSize() {
+        return days.size();
+    }
+
+    public void deleteDayList(String day){
+        days.remove(day);
+    }
 }
 
