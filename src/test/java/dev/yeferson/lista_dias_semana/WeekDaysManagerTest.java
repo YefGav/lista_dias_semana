@@ -1,0 +1,38 @@
+package dev.yeferson.lista_dias_semana;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import static org.hamcrest.Matchers.instanceOf;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class WeekDaysManagerTest {
+    @Test
+    @DisplayName("Verify WeekDaysManager instantiation")
+    void testWeekDaysManagerInstantiation() {
+        WeekDaysManager weekDaysManager = new WeekDaysManager(new ArrayList<>());
+        assertThat(weekDaysManager, notNullValue());
+        assertThat(weekDaysManager, instanceOf(WeekDaysManager.class));
+    }
+
+    @Test
+    @DisplayName("Verify that the days list starts empty")
+    void testDaysListIsEmpty() {
+        WeekDaysManager weekDaysManager = new WeekDaysManager(new ArrayList<>());
+        assertThat(weekDaysManager.getDays().isEmpty(), is(true));
+    }
+
+    @Test
+    @DisplayName("Verify that days are added to the list")
+    void testAddDays() {
+        WeekDaysManager weekDaysManager = new WeekDaysManager(new ArrayList<>());
+        weekDaysManager.addDaysList();
+        List<String> expectedDays = Arrays.asList("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+        assertThat(weekDaysManager.getDays(), is(expectedDays));
+    }
+}
