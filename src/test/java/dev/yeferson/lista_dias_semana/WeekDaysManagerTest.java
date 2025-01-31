@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class WeekDaysManagerTest {
+    
     @Test
     @DisplayName("Verify WeekDaysManager instantiation")
     void testWeekDaysManagerInstantiation() {
@@ -48,9 +49,18 @@ public class WeekDaysManagerTest {
     void testGetDaysListSize() {
         WeekDaysManager weekDaysManager = new WeekDaysManager(new ArrayList<>());
         weekDaysManager.addDaysList();
-        assertThat(weekDaysManager.getDays().size(), is(7));
+        assertThat(weekDaysManager.getDaysListSize(), is(7));
     }
-        
+     @Test
+     @DisplayName("Verify that deleteDayList removes  day from the list")
+     void testDeleteDayList(){
+         WeekDaysManager weekDaysManager = new WeekDaysManager(new ArrayList<>());
+         weekDaysManager.addDaysList();
+         weekDaysManager.deleteDayList("Martes");
+         List<String> expetedDays = List.of("Lunes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+         assertThat(weekDaysManager.getDays(), is(expetedDays));
+
+             }
 
         
     } 
