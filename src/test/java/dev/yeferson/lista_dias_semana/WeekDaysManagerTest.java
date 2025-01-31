@@ -42,4 +42,16 @@ public class WeekDaysManagerTest {
         WeekDaysManager weekDaysManager = new WeekDaysManager(initialDays);
         assertThat(weekDaysManager.getDays(), is(initialDays));  
     }
-}
+
+    @Test
+    @DisplayName(" Verify that getDaysListSize returns the correct size of the list")
+    void testGetDaysListSize() {
+        WeekDaysManager weekDaysManager = new WeekDaysManager(new ArrayList<>());
+        weekDaysManager.addDaysList();
+        assertThat(weekDaysManager.getDays().size(), is(7));
+    }
+        
+
+        
+    } 
+    
