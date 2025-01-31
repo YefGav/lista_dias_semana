@@ -32,7 +32,14 @@ public class WeekDaysManagerTest {
     void testAddDays() {
         WeekDaysManager weekDaysManager = new WeekDaysManager(new ArrayList<>());
         weekDaysManager.addDaysList();
-        List<String> expectedDays = Arrays.asList("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+        List<String> expectedDays = List.of("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
         assertThat(weekDaysManager.getDays(), is(expectedDays));
+    }
+    @Test
+    @DisplayName("Verify that getDays returns a list")
+    void testGetDays() {
+        List<String> initialDays = List.of("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
+        WeekDaysManager weekDaysManager = new WeekDaysManager(initialDays);
+        assertThat(weekDaysManager.getDays(), is(initialDays));  
     }
 }

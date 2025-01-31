@@ -3,9 +3,9 @@ package dev.yeferson.lista_dias_semana;
 import java.util.List;
 
 public class WeekDaysManager {
-    private List<String> days;
+    public List<String> days;
 
-    public WeekDaysManager(List<String> days) {
+     public WeekDaysManager(List<String> days) {
         this.days = days;
     }
 
