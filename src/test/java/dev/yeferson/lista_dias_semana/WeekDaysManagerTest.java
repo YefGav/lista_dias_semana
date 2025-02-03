@@ -78,5 +78,14 @@ public class WeekDaysManagerTest {
         assertThat(day, is("Martes"));
     } 
 
+    @Test
+    @DisplayName("Verify that dayExists returns true if the day is in the list")
+
+    void testDayExists(){
+        WeekDaysManager weekDaysManager = new WeekDaysManager(initialDays);
+        boolean exists = weekDaysManager.dayExists("Martes");
+        assertThat(exists, is(true));
+    }
+
 }
     
