@@ -43,5 +43,8 @@ public class WeekDaysManager {
         Collections.sort(days);
     }
 
+    public void clearDaysList(){
+        days.clear();
+    }
 }
 
