@@ -105,5 +105,14 @@ public class WeekDaysManagerTest {
         List<String> expectedDays = List.of( "Domingo", "Jueves", "Lunes", "Martes", "Miércoles", "Sábado", "Viernes");
         assertThat(weekDaysManager.getDays(), is(expectedDays));
     }
+
+    @Test
+    @DisplayName("Verify that clearDaysList clears the list")
+
+    void testClearDaysList(){
+        WeekDaysManager weekDaysManager = new WeekDaysManager(initialDays);
+        weekDaysManager.clearDaysList();
+        assertThat(weekDaysManager.getDays().isEmpty(), is(true));
+    }
 }
     
