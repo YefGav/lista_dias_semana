@@ -1,5 +1,6 @@
 package dev.yeferson.lista_dias_semana;
 
+import java.util.Collections;
 import java.util.List;
 
 public class WeekDaysManager {
@@ -36,6 +37,10 @@ public class WeekDaysManager {
     
     public boolean dayExists (String day){
         return days.contains(day);
+    }
+
+    public void sortDaysAlphabetically(){
+        Collections.sort(days);
     }
 
 }
