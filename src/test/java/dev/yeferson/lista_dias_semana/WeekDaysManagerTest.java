@@ -96,5 +96,14 @@ public class WeekDaysManagerTest {
         assertThat(exists, is(false));
     }
 
+    @Test
+    @DisplayName("Verify that sortDaysAlphabetically returns the days sorted alphabetically")
+
+    void testSortDaysAlphabetically(){
+        WeekDaysManager weekDaysManager = new WeekDaysManager(initialDays);
+        weekDaysManager.sortDaysAlphabetically();
+        List<String> expectedDays = List.of( "Domingo", "Jueves", "Lunes", "Martes", "Miércoles", "Sábado", "Viernes");
+        assertThat(weekDaysManager.getDays(), is(expectedDays));
+    }
 }
     
