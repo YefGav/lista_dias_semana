@@ -33,5 +33,10 @@ public class WeekDaysManager {
     public String getDayRequest(int index){
         return days.get(index);
     }
+    
+    public boolean dayExists (String day){
+        return days.contains(day);
+    }
+
 }
 
