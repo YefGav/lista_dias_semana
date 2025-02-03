@@ -29,5 +29,9 @@ public class WeekDaysManager {
     public void deleteDayList(String day){
         days.remove(day);
     }
+
+    public String getDayRequest(int index){
+        return days.get(index);
+    }
 }
 
