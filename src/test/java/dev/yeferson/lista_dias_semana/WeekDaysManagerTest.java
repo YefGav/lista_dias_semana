@@ -68,8 +68,15 @@ public class WeekDaysManagerTest {
          List<String> expetedDays = List.of("Lunes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo");
          assertThat(weekDaysManager.getDays(), is(expetedDays));
 
-             }
+    }
 
-        
+    @Test
+    @DisplayName("Verify that getDayRequest returns the correct day")
+    void testGetDayRequest() {
+        WeekDaysManager weekDaysManager = new WeekDaysManager(initialDays);
+        String day = weekDaysManager.getDayRequest(1);
+        assertThat(day, is("Martes"));
     } 
+
+}
     
